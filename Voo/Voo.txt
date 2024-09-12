@@ -1,0 +1,73 @@
+Construa um programa para Jairzinho registrar as ofertas de voos que ele encontra e escolha a data de ida e volta ideal. Dentre todas as ofertas, ele deve comprar as passagens mais baratas de ida e volta cujas datas estejam pelo menos quatro dias dentro do seu período de "férias". Enquanto ele sonha com suas férias, muitas coisas podem acontecer, novas ofertas podem aparecer, os preços podem mudar, ou um voo pode ser cancelado. Para onde ele vai viajar?
+
+* **`registrar`**: registra um novo voo com os parâmetros: número do voo, código de três letras do aeroporto de origem, código de três letras do aeroporto de destino, data do voo no formato dd/mm/aaaa e valor em reais.!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+* **`alterar`**: altera o valor de um voo já registrado com parâmetros número do voo e novo valor em reais. !!!!!!!!!!!!!!!!!!!!!
+
+* **`cancelar`**: cancela um voo já registrado com parâmetro número do voo. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+* **`planejar`**: informa os dados de Jairzinho e termina o programa com parâmetros: código do aeroporto de saída e datas do primeiro e do último dias de férias.!!!!!!!!!!!
+
+*Obs.: Você pode supor que todos os voos ocorrem nos anos de 2021 ou 2022.*
+
+
+
+
+
+registrar
+488
+XAP CGR
+05/08/2021
+29.87
+
+registrar
+907
+CGR XAP
+01/08/2021
+300.43
+
+registrar
+767
+CGR XAP
+01/08/2021
+335.37
+
+alterar
+767 324.68
+
+cancelar
+907
+
+planejar
+CGR
+29/07/2021 06/08/2021
+```
+
+codigo vai lendo até cancelar
+from sys import stdin
+ate ler planejar
+
+
+
+A saída deve informar toda vez que o valor de um voo foi alterado com a frase `X valor alterado de Y para Z`, onde X é o código do voo, Y é o valor anterior e Z é o novo valor. O final da saída deve conter duas linhas, uma com o código de origem e outra com o código do destino.
+
+### Exemplo de saída
+
+```
+767 valor alterado de 335.37 para 324.68
+767
+488
+```
+
+#metodo alterar vem com um printzinho humilde com o preço antigo pro novo (facil de codar)
+voo da origem
+voo pra volta
+
+ent a gnt quer selecionar voos validos:
+tem q ta a pelo menos 4 dias
+Dvoo - Dvolta >= 4
+
+aeroporto de volta tem que ser o mesmo da ida
+origem1 = destino2 e origem1 = destino1
+
+acho que o registrar apenda voos em uma lista ai no planejar ele vai percorrer a lista e devolver o melhor
